@@ -12,7 +12,7 @@ const todoList = () => {
   }
 
   const dueToday = () => {
-     return all.filter((item)=>item.dueDate=== today)
+     return all.filter((item)=>item.dueDate === today)
   }
 
   const dueLater = () => {
@@ -20,7 +20,7 @@ const todoList = () => {
   }
 
   const toDisplayableList = (list) => {
-     let res= list.map(item=>`${item.completed ? '[x] ':'[ ] '}${item.title} ${item.dueDate===today ? " ":item.dueDate}`).join("\n")
+     let res = list.map(item=>`${item.completed ? '[x] ':'[ ] '}${item.title} ${item.dueDate===today ? " ":item.dueDate}`).join("\n")
         return res;
   }
   return { all, add, markAsComplete, overdue, dueToday, dueLater, toDisplayableList };
